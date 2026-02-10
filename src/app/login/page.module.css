@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    padding: 1rem;
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.85);
+    /* Light Glass */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    border-radius: var(--radius-lg);
+    /* More rounded modern look */
+}

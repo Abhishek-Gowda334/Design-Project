@@ -1,66 +1,59 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Leaf, CloudSun, TrendingUp, Users } from "lucide-react";
 import styles from "./page.module.css";
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.title}>
+            The Future of <span className={styles.highlight}>Virtual Farming</span>
+          </h1>
+          <p className={styles.subtitle}>
+            From rooftop gardens to large-scale multi-cropping.
+            Master the art of sustainable agriculture with AI-driven insights and expert community support.
           </p>
+          <div className={styles.ctaGroup}>
+            <Link href="/login">
+              <Button size="lg" className={styles.ctaButton}>
+                Start Farming <ArrowRight size={20} />
+              </Button>
+            </Link>
+            <Link href="/modules">
+              <Button variant="secondary" size="lg">Explore Modules</Button>
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      <section className={styles.features}>
+        <Card className={styles.featureCard} hoverEffect>
+          <div className={styles.iconWrapper}><Leaf size={32} /></div>
+          <h3>Urban Farming</h3>
+          <p>Master Aeroponics, Hydroponics, and Mushroom farming in small city spaces.</p>
+        </Card>
+
+        <Card className={styles.featureCard} hoverEffect>
+          <div className={styles.iconWrapper}><TrendingUp size={32} /></div>
+          <h3>Smart Income</h3>
+          <p>Multi-cropping strategies to maximize monthly and annual revenue.</p>
+        </Card>
+
+        <Card className={styles.featureCard} hoverEffect>
+          <div className={styles.iconWrapper}><CloudSun size={32} /></div>
+          <h3>Climate AI</h3>
+          <p>Real-time weather data and market price predictions for better decisions.</p>
+        </Card>
+
+        <Card className={styles.featureCard} hoverEffect>
+          <div className={styles.iconWrapper}><Users size={32} /></div>
+          <h3>Expert Community</h3>
+          <p>Get answers from agricultural experts and share your success stories.</p>
+        </Card>
+      </section>
     </div>
   );
 }

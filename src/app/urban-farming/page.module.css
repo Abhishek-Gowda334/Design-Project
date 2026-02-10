@@ -1,0 +1,171 @@
+.container {
+    min-height: 100vh;
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Removed background-color to inherit global theme */
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.glitchTitle {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    /* Changed from white for light theme */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px rgba(27, 67, 50, 0.15);
+    /* Softer shadow */
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--color-primary-light);
+    margin-bottom: 3rem;
+    font-family: monospace;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.statLabel {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+}
+
+.grid {
+    max-width: 1200px;
+    margin: -50px auto 0;
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Wider cards */
+    gap: 2rem;
+    position: relative;
+    z-index: 3;
+}
+
+.techCard {
+    background: rgba(255, 255, 255, 0.65);
+    /* Light Glass */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.imageContainer {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.techImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iconOverlay {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.cardContent {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cardContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardContent p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.steps {
+    margin-bottom: 1.5rem;
+    background: rgba(0, 0, 0, 0.04);
+    /* Subtly dark for contrast on light bg */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.steps h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+.steps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.steps li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-text-main);
+}
+
+.check {
+    color: var(--color-primary-light);
+    min-width: 12px;
+}
+
+.techBtn {
+    width: 100%;
+    margin-top: auto;
+}
