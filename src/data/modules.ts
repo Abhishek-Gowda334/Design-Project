@@ -216,6 +216,136 @@ export const cropModules: Module[] = [
         soilType: 'Humus rich',
         waterRequirements: 'Regular',
         harvestTime: 'All season'
+    },
+    {
+        id: 'groundnut',
+        title: 'Groundnut (Peanut)',
+        category: 'short-term',
+        duration: '4-5 months',
+        difficulty: 'Beginner',
+        description: 'Learn to grow groundnuts — a protein-rich oilseed crop ideal for semi-arid regions.',
+        image: '/images/crop_groundnut.png',
+        scientificName: 'Arachis hypogaea',
+        soilType: 'Sandy loam',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Kharif'
+    },
+    {
+        id: 'mustard',
+        title: 'Mustard',
+        category: 'short-term',
+        duration: '4-5 months',
+        difficulty: 'Beginner',
+        description: 'Cultivate mustard for oil and spice. A vibrant Rabi crop that turns fields golden yellow.',
+        image: '/images/crop_mustard.png',
+        scientificName: 'Brassica juncea',
+        soilType: 'Loamy',
+        waterRequirements: 'Low',
+        harvestTime: 'Rabi'
+    },
+    {
+        id: 'sunflower',
+        title: 'Sunflower',
+        category: 'short-term',
+        duration: '3-4 months',
+        difficulty: 'Beginner',
+        description: 'Grow sunflowers for oilseed production and beautiful farm landscapes.',
+        image: '/images/crop_sunflower.jpg',
+        scientificName: 'Helianthus annuus',
+        soilType: 'Well-drained loam',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Kharif / Rabi'
+    },
+    {
+        id: 'banana',
+        title: 'Banana',
+        category: 'mid-term',
+        duration: '10-12 months',
+        difficulty: 'Intermediate',
+        description: 'Master banana cultivation — from tissue culture planting to bunch harvesting.',
+        image: '/images/crop_banana.png',
+        scientificName: 'Musa spp.',
+        soilType: 'Rich loamy',
+        waterRequirements: 'High',
+        harvestTime: 'Year-round'
+    },
+    {
+        id: 'brinjal',
+        title: 'Brinjal (Eggplant)',
+        category: 'short-term',
+        duration: '3-4 months',
+        difficulty: 'Beginner',
+        description: 'Cultivate brinjal — one of India\'s most popular and versatile vegetables.',
+        image: '/images/crop_brinjal.png',
+        scientificName: 'Solanum melongena',
+        soilType: 'Well-drained loam',
+        waterRequirements: 'Moderate',
+        harvestTime: 'All season'
+    },
+    {
+        id: 'cucumber',
+        title: 'Cucumber',
+        category: 'short-term',
+        duration: '2-3 months',
+        difficulty: 'Beginner',
+        description: 'Fast-growing vine crop perfect for kitchen gardens and commercial farming alike.',
+        image: '/images/crop_cucumber.png',
+        scientificName: 'Cucumis sativus',
+        soilType: 'Sandy loam',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Summer / Kharif'
+    },
+    {
+        id: 'watermelon',
+        title: 'Watermelon',
+        category: 'short-term',
+        duration: '3-4 months',
+        difficulty: 'Intermediate',
+        description: 'Grow juicy watermelons in sandy riverbed soils. High demand in summer months.',
+        image: '/images/crop_watermelon.jpg',
+        scientificName: 'Citrullus lanatus',
+        soilType: 'Sandy',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Summer'
+    },
+    {
+        id: 'mango',
+        title: 'Mango',
+        category: 'long-term',
+        duration: '3-6 years (first fruit)',
+        difficulty: 'Advanced',
+        description: 'The king of fruits. Learn mango orchard management from grafting to export-quality harvesting.',
+        image: '/images/crop_mango.jpg',
+        scientificName: 'Mangifera indica',
+        soilType: 'Deep alluvial',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Summer'
+    },
+    {
+        id: 'coffee',
+        title: 'Coffee',
+        category: 'long-term',
+        duration: '3-4 years (first harvest)',
+        difficulty: 'Advanced',
+        description: 'Shade-grown coffee cultivation — from seedling to cup, master the plantation art.',
+        image: '/images/crop_coffee.jpg',
+        scientificName: 'Coffea arabica',
+        soilType: 'Red laterite',
+        waterRequirements: 'Moderate',
+        harvestTime: 'Nov-Feb'
+    },
+    {
+        id: 'tea',
+        title: 'Tea',
+        category: 'long-term',
+        duration: '3-5 years (first pluck)',
+        difficulty: 'Advanced',
+        description: 'Learn tea cultivation — from nursery management to processing premium leaf grades.',
+        image: '/images/crop_tea.jpg',
+        scientificName: 'Camellia sinensis',
+        soilType: 'Acidic loam',
+        waterRequirements: 'High',
+        harvestTime: 'Mar-Nov'
     }];
 
 export const urbanModules = [
@@ -256,6 +386,84 @@ export const urbanModules = [
             'Inoculate with mushroom spawn.',
             'Maintain high humidity (85-95%) and low light.',
             'Harvest flushes every few weeks.'
+        ]
+    },
+    {
+        id: 'terrace-kitchen-garden',
+        title: 'Terrace Kitchen Garden',
+        description: 'Grow fresh herbs and vegetables on your rooftop or balcony all year round.',
+        icon: 'home',
+        image: '/images/urban_terrace_garden.png',
+        steps: [
+            'Set up raised beds or grow bags on your terrace.',
+            'Choose compact varieties — cherry tomato, chilli, coriander, mint.',
+            'Use a compost bin to recycle kitchen waste into fertilizer.',
+            'Install drip irrigation for consistent watering.'
+        ]
+    },
+    {
+        id: 'aquaponics-system',
+        title: 'Aquaponics System',
+        description: 'Combine fish farming with plant growing in a self-sustaining ecosystem.',
+        icon: 'fish',
+        image: '/images/urban_aquaponics.png',
+        steps: [
+            'Set up a fish tank with tilapia or goldfish.',
+            'Connect grow beds above the tank with a water pump.',
+            'Fish waste provides nitrogen; plants filter water for fish.',
+            'Monitor ammonia, nitrite, and nitrate levels weekly.'
+        ]
+    },
+    {
+        id: 'container-fruit-farming',
+        title: 'Container Fruit Farming',
+        description: 'Grow dwarf fruit trees in pots — perfect for patios and balconies.',
+        icon: 'apple',
+        image: '/images/urban_container_fruit.png',
+        steps: [
+            'Select dwarf varieties — lemon, guava, pomegranate, fig.',
+            'Use 18-24 inch containers with well-draining soil mix.',
+            'Apply balanced NPK fertilizer every 2 weeks during fruiting.',
+            'Prune regularly to maintain shape and improve air circulation.'
+        ]
+    },
+    {
+        id: 'microgreens-indoor',
+        title: 'Microgreens & Sprouts',
+        description: 'Harvest nutrient-dense greens in just 7-14 days from your kitchen counter.',
+        icon: 'sprout',
+        image: '/images/urban_microgreens.png',
+        steps: [
+            'Spread seeds densely on a shallow tray with moist coco peat.',
+            'Cover for 2-3 days (blackout phase) for germination.',
+            'Uncover and expose to indirect sunlight; mist daily.',
+            'Harvest at 2-3 inches — use sunflower, radish, pea, or mustard seeds.'
+        ]
+    },
+    {
+        id: 'vertical-tower-garden',
+        title: 'Vertical Tower Garden',
+        description: 'Stack plants vertically using PVC towers to grow 50+ plants in 4 sq ft.',
+        icon: 'tower',
+        image: '/images/urban_vertical_tower.png',
+        steps: [
+            'Build or buy a vertical tower with 20-30 planting pockets.',
+            'Fill with lightweight grow media (perlite + coco coir).',
+            'Plant herbs, lettuce, strawberries, or small peppers.',
+            'Use a timer-based drip system to water from the top down.'
+        ]
+    },
+    {
+        id: 'rooftop-beekeeping',
+        title: 'Rooftop Bee Keeping',
+        description: 'Support pollination and harvest fresh honey from urban beehives.',
+        icon: 'bee',
+        image: '/images/urban_rooftop_beekeeping.png',
+        steps: [
+            'Place hive boxes on a shaded, elevated area of your rooftop.',
+            'Source a bee colony (Apis cerana or Apis mellifera) from a local apiary.',
+            'Inspect hives every 10 days for queen health and pests.',
+            'Harvest honey frames when 80% capped; extract using a centrifuge.'
         ]
     }
 ];

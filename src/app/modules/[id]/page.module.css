@@ -32,19 +32,22 @@
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.1;
+    color: #ffffff;
+    /* Solves low contrast on dark bg */
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .sciName {
-    color: var(--color-primary-light);
+    color: #d8f3dc;
+    /* Light green tint for subtitle */
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
 .description {
     font-size: 1.2rem;
-    color: #202122;
-    /* Updated Charcoal */
+    color: #f3f4f6;
+    /* White/Light Grey for description */
     margin-bottom: 2rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -53,7 +56,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    color: var(--color-text-main);
+    color: #ffffff !important;
 }
 
 .metaItem {
@@ -63,6 +66,7 @@
     background: rgba(0, 0, 0, 0.3);
     padding: 0.5rem 1rem;
     border-radius: 20px;
+    color: #ffffff !important;
 }
 
 .statsRow {
@@ -78,9 +82,12 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #202122;
-    /* Updated Charcoal */
-    font-weight: 500;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.statItem span {
+    color: #ffffff !important;
 }
 
 .statIcon {
@@ -108,7 +115,7 @@
 }
 
 .section p {
-    color: var(--color-text-muted);
+    color: #1a1a1a;
     line-height: 1.6;
 }
 
@@ -118,20 +125,118 @@
     margin: 0;
 }
 
-.syllabus li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.syllabusItem {
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.syllabus li:last-child {
+.syllabusItem:last-child {
     border-bottom: none;
+}
+
+.syllabusHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.syllabusWeek {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff !important;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+}
+
+.syllabusTitle {
+    font-weight: 600;
+    color: #111827 !important;
+    font-size: 1.05rem;
+}
+
+.topicList {
+    list-style: disc;
+    margin: 0.25rem 0 0 2.75rem;
+    padding: 0;
+}
+
+.topicList li {
+    color: #374151 !important;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.topicCheckbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.topicDone {
+    opacity: 0.6;
+}
+
+.topicTextDone {
+    text-decoration: line-through;
+    color: #888 !important;
+}
+
+.syllabusItemDone {
+    opacity: 0.7;
+}
+
+.checkDone {
+    color: var(--color-primary) !important;
 }
 
 .check {
     color: var(--color-primary-light);
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.progressBar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    font-size: 0.85rem;
+    color: #374151 !important;
+    margin-bottom: 1rem;
+}
+
+.enrolledBadge {
+    display: inline-block;
+    background: #d4edda;
+    color: #155724 !important;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
 }
 
 .enrollCard {
@@ -146,7 +251,7 @@
 
 .enrollCard p {
     margin-bottom: 1.5rem;
-    color: var(--color-text-muted);
+    color: #1a1a1a;
 }
 
 .fullBtn {
@@ -160,7 +265,7 @@
     justify-content: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: #1a1a1a;
 }
 
 @media (max-width: 768px) {

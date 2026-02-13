@@ -53,10 +53,11 @@ export default function CropCalculator() {
                 <div className={styles.row}>
                     <input
                         type="number"
-                        placeholder="Area size"
+                        placeholder="Area size (min 20)"
                         value={area}
                         onChange={(e) => setArea(e.target.value)}
                         className={styles.input}
+                        min="20"
                     />
                     <select value={unit} onChange={(e) => setUnit(e.target.value)} className={styles.select}>
                         <option value="sqm">sq. meters</option>

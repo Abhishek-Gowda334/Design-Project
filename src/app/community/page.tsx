@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { MessageCircle, User, ThumbsUp, Send } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
+import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import styles from './page.module.css';
 
 export default function CommunityPage() {
@@ -51,66 +52,68 @@ export default function CommunityPage() {
     };
 
     return (
-        <div className={styles.container}>
-            <header className={styles.header}>
-                <h1>Expert Community</h1>
-                <p>Connect with experts and fellow farmers.</p>
-            </header>
+        <ProtectedRoute>
+            <div className={styles.container}>
+                <header className={styles.header}>
+                    <h1>Expert Community</h1>
+                    <p>Connect with experts and fellow farmers.</p>
+                </header>
 
-            {/* Question Input Section */}
-            <Card className={styles.inputCard}>
-                <div className={styles.inputHeader}>
-                    <h3>Ask an Expert</h3>
-                    <span className={styles.badge}>Priority</span>
-                </div>
-                <textarea
-                    className={styles.textarea}
-                    placeholder="Type your question here... e.g., 'Best time to harvest wheat?'"
-                    value={question}
-                    onChange={(e) => setQuestion(e.target.value)}
-                    rows={3}
-                />
-                <div className={styles.inputActions}>
-                    <p className={styles.helperText}>*Experts usually reply within 24 hours.</p>
-                    <Button onClick={handleSubmit} disabled={!question.trim()}>
-                        <Send size={16} /> Post Question
-                    </Button>
-                </div>
-            </Card>
+                {/* Question Input Section */}
+                <Card className={styles.inputCard}>
+                    <div className={styles.inputHeader}>
+                        <h3>Ask an Expert</h3>
+                        <span className={styles.badge}>Priority</span>
+                    </div>
+                    <textarea
+                        className={styles.textarea}
+                        placeholder="Type your question here... e.g., 'Best time to harvest wheat?'"
+                        value={question}
+                        onChange={(e) => setQuestion(e.target.value)}
+                        rows={3}
+                    />
+                    <div className={styles.inputActions}>
+                        <p className={styles.helperText}>*Experts usually reply within 24 hours.</p>
+                        <Button onClick={handleSubmit} disabled={!question.trim()}>
+                            <Send size={16} /> Post Question
+                        </Button>
+                    </div>
+                </Card>
 
-            <div className={styles.feed}>
-                {posts.map(post => (
-                    <Card key={post.id} className={styles.post}>
-                        <div className={styles.postHeader}>
-                            <div className={styles.authorInfo}>
-                                <div className={styles.avatar}><User size={20} /></div>
-                                <div>
-                                    <span className={styles.authorName}>{post.author}</span>
-                                    <span className={styles.authorRole}>{post.role}</span>
+                <div className={styles.feed}>
+                    {posts.map(post => (
+                        <Card key={post.id} className={styles.post}>
+                            <div className={styles.postHeader}>
+                                <div className={styles.authorInfo}>
+                                    <div className={styles.avatar}><User size={20} /></div>
+                                    <div>
+                                        <span className={styles.authorName}>{post.author}</span>
+                                        <span className={styles.authorRole}>{post.role}</span>
+                                    </div>
                                 </div>
+                                <span className={styles.date}>{post.date}</span>
                             </div>
-                            <span className={styles.date}>{post.date}</span>
-                        </div>
 
-                        <h3 className={styles.question}>{post.question}</h3>
+                            <h3 className={styles.question}>{post.question}</h3>
 
-                        {post.expertReply && (
-                            <div className={styles.expertReply}>
-                                <div className={styles.expertHeader}>
-                                    <span className={styles.expertBadge}>Expert Answer</span>
-                                    <span className={styles.expertName}>{post.expertReply.author}</span>
+                            {post.expertReply && (
+                                <div className={styles.expertReply}>
+                                    <div className={styles.expertHeader}>
+                                        <span className={styles.expertBadge}>Expert Answer</span>
+                                        <span className={styles.expertName}>{post.expertReply.author}</span>
+                                    </div>
+                                    <p>{post.expertReply.content}</p>
                                 </div>
-                                <p>{post.expertReply.content}</p>
-                            </div>
-                        )}
+                            )}
 
-                        <div className={styles.actions}>
-                            <Button variant="ghost" size="sm"><ThumbsUp size={16} /> Like</Button>
-                            <Button variant="ghost" size="sm"><MessageCircle size={16} /> {post.replies} Replies</Button>
-                        </div>
-                    </Card>
-                ))}
+                            <div className={styles.actions}>
+                                <Button variant="ghost" size="sm"><ThumbsUp size={16} /> Like</Button>
+                                <Button variant="ghost" size="sm"><MessageCircle size={16} /> {post.replies} Replies</Button>
+                            </div>
+                        </Card>
+                    ))}
+                </div>
             </div>
-        </div>
+        </ProtectedRoute>
     );
 }

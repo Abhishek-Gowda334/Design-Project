@@ -15,9 +15,9 @@
   /* Darker for readability */
 
   /* Glassmorphism - Balanced Opacity */
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  /* More transparent */
-  --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.96);
+  /* Nearly solid for maximum readability */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.9);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
   --backdrop-blur: 20px;
   /* Heavy blur for text safety */
